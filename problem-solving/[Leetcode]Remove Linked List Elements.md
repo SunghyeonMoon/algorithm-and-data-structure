@@ -1,4 +1,4 @@
-# 203. [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)
+# [Leetcode] 203. [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)
 
 현재 노드가 찾는값이면 이전 노드에서 삭제
 단, 현재 노드가 Head 노드일 때 이전 노드가 존재하지 않으므로 Head 노드 앞에 dummy 노드 생성
