@@ -19,10 +19,10 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 
 2. Idea 1의 로직을 순서대로 시행하기 위해서는 Intervals의 Sort가 필요하다.
 
-![정렬이 안된 경우](https://user-images.githubusercontent.com/75469212/151913141-de1a4aec-51e3-41a5-a0df-2c6ec42677f3.png)
+![정렬이 안된 경우](https://user-images.githubusercontent.com/75469212/151913141-de1a4aec-51e3-41a5-a0df-2c6ec42677f3.png)  
 정렬 하지 않은 경우
 
-![정렬이 된 경우](https://user-images.githubusercontent.com/75469212/151913259-4b97d660-c3b4-41e0-8941-afe78a5e6d22.png)
+![정렬이 된 경우](https://user-images.githubusercontent.com/75469212/151913259-4b97d660-c3b4-41e0-8941-afe78a5e6d22.png)  
 정렬 한 경우
 
 ### 결론 - Intervals를 정렬해서 Interval 선형적으로 합져가면 되겠다.
