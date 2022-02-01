@@ -48,7 +48,7 @@ class Solution:
 
 ## 시간 복잡도
 
-1. intervals를 정렬하는 데 O(NlogN) 소요
+### intervals를 정렬하는 데 O(NlogN) 소요
 
 파이썬 기본 sort 함수는 Merge Sort와 Insertion Sort의 장점을 합친 Tim Sort Algorithm을 사용한다.
 
@@ -60,7 +60,7 @@ class Solution:
 | MergeSort | Nlog(N) | Nlog(N) | Nlog(N) |
 | Tim Sort  | N       | Nlog(N) | Nlog(N) |
 
-2. Intervals를 선형 탐색 하면서 O(N) 소요
+### Intervals를 선형 탐색 하면서 O(N) 소요
 
 ### 결과적으로 O(NlogN)으로 풀이
 
