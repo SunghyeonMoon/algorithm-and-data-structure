@@ -15,7 +15,7 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 1. Front Interval의 끝보다 Back Interval의 시작이 빠르다면 두 Interval은 합쳐진다.
 
 ![Idea1](https://user-images.githubusercontent.com/75469212/151913109-747c4289-2b64-4773-ad5e-49d28f0665cb.png)
-)
+
 
 2. Idea 1의 로직을 순서대로 시행하기 위해서는 Intervals의 Sort가 필요하다.
 
