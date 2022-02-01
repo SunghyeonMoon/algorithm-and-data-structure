@@ -34,15 +34,15 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         intervals.sort()
-        # 합쳐가는 interval을 따로 변수로 관리 하지 않고, answer의 마지막 요소를 계산하면서 변수를 하나 줄일 수 있다.
+        # 합쳐가는 Temp interval을 따로 변수로 관리 하지 않고, answer의 마지막 요소로 사용하면서, 변수를 하나 줄일 수 있다.
         # interval[0]을 초기값으로 설정해서 첫 interval일 때의 예외처리를 할 수 있다.
         answer = [intervals[0]]
         for interval in intervals[1:]:
             if answer[-1][1] >= interval[0]:
-                # 합쳐지는 과정에서 반드시 뒤의 interval의 끝이 더 뒤라는 보장이 없으므로 비교해서 합쳐야한다.
+                # 합쳐지는 과정에서 반드시 뒤의 interval의 끝이 더 뒤라는 보장이 없으므로 두 interval의 끝을 비교해서 합친다.
                 answer[-1][1] = max(answer[-1][1], interval[1])
             else:
-                # 합칠 수 없다면, 현재의 interval로 다시 합치기 시작한다.
+                # 합칠 수 없다면, 현재의 interval을 시작으로 다시 로직을 시작한다.
                 answer.append(interval)
         return answer
 ```
