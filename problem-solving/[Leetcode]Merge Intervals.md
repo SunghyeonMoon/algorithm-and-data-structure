@@ -31,11 +31,11 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 ## 시각화
 
 ![구현설명1](https://user-images.githubusercontent.com/75469212/151921472-34f64463-d6d7-478a-8afb-af21b40ba4f1.png)  
-answer[-1]의 끝이 interval의 시작보다 뒤라면
+answer[-1]의 끝이 interval의 시작보다 뒤라면  
 ![구션설명2](https://user-images.githubusercontent.com/75469212/151921521-352374ab-4313-469f-ac3c-92bbcf44ae05.png)  
-두 interval을 합친다
+두 interval을 합친다  
 ![구현설명3](https://user-images.githubusercontent.com/75469212/151921522-df900ce4-cd8c-4450-8cbd-216ea031a979.png)  
-더 이상 합칠 수 없다면, 현재 interval을 answer[-1]로 설정
+더 이상 합칠 수 없다면, 현재 interval을 answer[-1]로 설정 
 
 ```py
 class Solution:
