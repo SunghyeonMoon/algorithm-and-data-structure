@@ -35,7 +35,7 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         intervals.sort()
-        # now: 지금 합쳐가고 있는 interval
+        # now: 실시간으로 합쳐지고 있는 요소를 저장할 공간 
         now = []
         answer = []
         for interval in intervals:
