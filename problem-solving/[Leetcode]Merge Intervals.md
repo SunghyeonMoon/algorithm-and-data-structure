@@ -35,31 +35,6 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         intervals.sort()
-        # now: 실시간으로 합쳐지고 있는 요소를 저장할 공간 
-        now = []
-        answer = []
-        for interval in intervals:
-            # interval이 처음이라 now가 없다면 현재 interval을 now로 설정하고 continue
-            if not now:
-                now = interval
-                continue
-            # 합쳐가는 interval의 끝이 비교할 interval의 시작점 보다 작다면
-            if now[1] >= interval[0]:
-                # 두 interval을 합칠 때 더 큰 끝점을 기준으로 합친다
-                now[1] = max(now[1], interval[1])
-            # 합칠 수 없다면 합쳐가던 interval을 answer에 넣고, now를 interval로 초기화한다
-            else:
-                answer.append(now)
-                now = interval
-        return answer
-```
-
-### 최적화 후
-
-```py
-class Solution:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        intervals.sort()
         # 합쳐가는 now interval을 따로 변수로 관리 하지 않고, answer의 마지막 요소로 사용하면서, 변수를 하나 줄일 수 있다.
         answer = [intervals[0]]
         for interval in intervals[1:]:
