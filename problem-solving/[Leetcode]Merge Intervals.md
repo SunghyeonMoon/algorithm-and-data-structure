@@ -29,14 +29,41 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 
 ## 구현
 
+### 최적화 전 풀이
+
 ```py
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         intervals.sort()
-        # 합쳐가는 Temp interval을 따로 변수로 관리 하지 않고, answer의 마지막 요소로 사용하면서, 변수를 하나 줄일 수 있다.
-        # interval[0]을 초기값으로 설정해서 첫 interval일 때의 예외처리를 할 수 있다.
+        # now: 지금 합쳐가고 있는 interval
+        now = []
+        answer = []
+        for interval in intervals:
+            # interval이 처음이라 now가 없다면 현재 interval을 now로 설정하고 continue
+            if not now:
+                now = interval
+                continue
+            # 합쳐가는 interval의 끝이 비교할 interval의 시작점 보다 작다면
+            if now[1] >= interval[0]:
+                # 두 interval을 합칠 때 더 큰 끝점을 기준으로 합친다
+                now[1] = max(now[1], interval[1])
+            # 합칠 수 없다면 합쳐가던 interval을 answer에 넣고, now를 interval로 초기화한다
+            else:
+                answer.append(now)
+                now = interval
+        return answer
+```
+
+### 최적화 후
+
+```py
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        intervals.sort()
+        # 합쳐가는 now interval을 따로 변수로 관리 하지 않고, answer의 마지막 요소로 사용하면서, 변수를 하나 줄일 수 있다.
         answer = [intervals[0]]
         for interval in intervals[1:]:
+            # answer[-1][1]은 현재 합치고 있는 interval의 끝점
             if answer[-1][1] >= interval[0]:
                 # 합쳐지는 과정에서 반드시 뒤의 interval의 끝이 더 뒤라는 보장이 없으므로 두 interval의 끝을 비교해서 합친다.
                 answer[-1][1] = max(answer[-1][1], interval[1])
