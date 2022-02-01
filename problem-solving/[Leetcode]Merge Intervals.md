@@ -16,7 +16,6 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 
 ![Idea1](https://user-images.githubusercontent.com/75469212/151913109-747c4289-2b64-4773-ad5e-49d28f0665cb.png)
 
-
 2. Idea 1의 로직을 순서대로 시행하기 위해서는 Intervals의 Sort가 필요하다.
 
 ![정렬이 안된 경우](https://user-images.githubusercontent.com/75469212/151913141-de1a4aec-51e3-41a5-a0df-2c6ec42677f3.png)  
@@ -28,6 +27,15 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 ### 결론 - Intervals를 정렬해서 Interval을 선형적으로 즉, 순서대로 합쳐가면 되겠다.
 
 ## 구현
+
+## 시각화
+
+![구현설명1](https://user-images.githubusercontent.com/75469212/151921472-34f64463-d6d7-478a-8afb-af21b40ba4f1.png)  
+answer[-1]의 끝이 interval의 시작보다 뒤라면
+![구션설명2](https://user-images.githubusercontent.com/75469212/151921521-352374ab-4313-469f-ac3c-92bbcf44ae05.png)  
+두 interval을 합친다
+![구현설명3](https://user-images.githubusercontent.com/75469212/151921522-df900ce4-cd8c-4450-8cbd-216ea031a979.png)  
+더 이상 합칠 수 없다면, 현재 interval을 answer[-1]로 설정
 
 ```py
 class Solution:
