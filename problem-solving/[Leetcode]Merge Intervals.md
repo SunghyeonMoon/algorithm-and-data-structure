@@ -30,7 +30,8 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 
 ## 시각화
 
-![구현설명1](https://user-images.githubusercontent.com/75469212/151921927-770144ee-405f-4211-9694-1e38353bd8e2.png)    
+
+![구현설명1](https://user-images.githubusercontent.com/75469212/151922049-c9f49721-bfcf-4e1e-a3f3-1ef10ca09087.png)     
 answer[-1]의 끝이 interval의 시작보다 뒤라면  
 ![구션설명2](https://user-images.githubusercontent.com/75469212/151921521-352374ab-4313-469f-ac3c-92bbcf44ae05.png)  
 두 interval을 합친다  
