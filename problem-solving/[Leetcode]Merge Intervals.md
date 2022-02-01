@@ -25,7 +25,7 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 ![정렬이 된 경우](https://user-images.githubusercontent.com/75469212/151913259-4b97d660-c3b4-41e0-8941-afe78a5e6d22.png)  
 정렬 한 경우
 
-### 결론 - Intervals를 정렬해서 Interval 선형적으로 합져가면 되겠다.
+### 결론 - Intervals를 정렬해서 Interval 선형적으로 합쳐가면 되겠다.
 
 ## 구현
 
