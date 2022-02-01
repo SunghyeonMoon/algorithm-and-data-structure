@@ -52,8 +52,7 @@ class Solution:
 
 파이썬 기본 sort 함수는 Merge Sort와 Insertion Sort의 장점을 합친 Tim Sort Algorithm을 사용한다.
 
-- 참고: 여기서 Tim Sort Algorithm이란 실제로 사용되는 데이터들은 어느정도 정렬 된 상태에 있지 않을까라는 생각을 기반으로 합니다.   
-Merge Sort를 끝까지 쪼개지 않고 어느정도 배열을 쪼갠 후, 대부분 정렬되어 있는 배열에서 O(N)에 가깝게 정렬이 가능한 Insertion Sort를 사용하여 정렬 후에 합치면 되지않을까라는 논리로 만들어진 알고리즘이다.
+- 참고: Tim Sort Algorithm에 대해서 추가적으로 설명 드리면, 실제로 사용되는 데이터들이 어느정도 정렬 되어있는 상태에 있을 것이라는 생각을 기반으로 합니다. Merge Sort를 끝까지 쪼개지 않고 임의의 배열로 쪼갠 후, 대부분 정렬되어 있으며 O(N)에 가깝게 정렬이 가능한 Insertion Sort를 사용하여 정렬 후에 합친다는 논리로 만들어진 알고리즘입니다.
 
 | Algorithm | Best    | Average | Worst   |
 | --------- | ------- | ------- | ------- |
