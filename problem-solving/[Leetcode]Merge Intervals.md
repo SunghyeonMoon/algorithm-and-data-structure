@@ -29,8 +29,6 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 
 ## 구현
 
-### 최적화 전 풀이
-
 ```py
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
