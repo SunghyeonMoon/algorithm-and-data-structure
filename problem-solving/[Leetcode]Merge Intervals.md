@@ -10,6 +10,18 @@ Given an array of intervals where intervals[i] = [starti, endi], merge all overl
 - intervals[i].length == 2
 - 0 <= starti <= endi <= 104
 
+## Example
+
+### Example1
+
+Input: intervals = [[1,3],[2,6],[8,10],[15,18]]  
+Output: [[1,6],[8,10],[15,18]]
+
+### Example2
+
+Input: intervals = [[1,4],[4,5]]  
+Output: [[1,5]]
+
 ## Main Idea
 
 1. Front Interval의 끝보다 Back Interval의 시작이 빠르다면 두 Interval은 합쳐진다.
